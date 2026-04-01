@@ -1,0 +1,777 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DigiLog | Digital Logbook</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero-card">
+      <nav class="topbar" aria-label="Main navigation">
+        <div>
+          <p class="brand-kicker">Digital English Logbook</p>
+          <h1 class="brand-name">DigiLog</h1>
+        </div>
+        <div class="nav-actions">
+          <a class="ghost-button" href="#register">Start My Logbook</a>
+          <a class="secondary-button" href="#progress">View Progress</a>
+        </div>
+      </nav>
+
+      <section class="hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">A simple digital logbook for A2-B1 English learners</span>
+          <h2>Track Your Learning, Improve Every Week</h2>
+          <p>
+            DigiLog helps students record goals, reflect on learning, and get teacher feedback in a warm, easy-to-use dashboard.
+            Teachers can quickly observe progress, spot difficulties, and support each learner with clear next steps.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#logbook-form">Start My Logbook</a>
+            <a class="secondary-button" href="#progress">View Progress</a>
+          </div>
+          <p class="hero-credit">
+            Created by Nguyen Tran Uyen Nhi, Duong Quang Trung, and Tran Vu Mai Yen
+          </p>
+        </div>
+
+        <aside class="hero-panel" aria-label="Learning dashboard preview">
+          <div class="panel-badge">Live Learning View</div>
+          <h3>One place for student reflection and teacher support</h3>
+          <div class="preview-grid">
+            <article class="mini-card">
+              <span class="mini-title">Weekly goal</span>
+              <strong>Speak with more confidence</strong>
+            </article>
+            <article class="mini-card">
+              <span class="mini-title">Checklist</span>
+              <ul class="check-list compact">
+                <li>Set goal</li>
+                <li>Write log</li>
+                <li>Read feedback</li>
+              </ul>
+            </article>
+            <article class="mini-card chart-preview">
+              <span class="mini-title">Progress</span>
+              <div class="spark-bars" aria-hidden="true">
+                <span style="height: 40%"></span>
+                <span style="height: 55%"></span>
+                <span style="height: 68%"></span>
+                <span style="height: 82%"></span>
+              </div>
+            </article>
+          </div>
+          <div class="mini-progress">
+            <div>
+              <span class="mini-label">Weekly confidence</span>
+              <strong>78%</strong>
+            </div>
+            <div class="progress-bar" aria-hidden="true">
+              <span style="width: 78%"></span>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section class="section-block" id="register" aria-labelledby="register-title">
+        <div class="dual-grid">
+          <section class="card register-card">
+            <div class="card-header align-start">
+              <div>
+                <p class="section-kicker">Student access</p>
+                <h2 id="register-title">Register to save your progress</h2>
+                <p class="support-copy">Use your full name and email so your teacher can follow your weekly logbook journey.</p>
+              </div>
+              <span class="pill warm-pill">Safe and simple</span>
+            </div>
+
+            <form class="register-grid">
+              <label class="field">
+                <span>Full Name</span>
+                <input id="student-name" type="text" placeholder="Enter your full name">
+              </label>
+              <label class="field">
+                <span>Email</span>
+                <input id="student-email" type="email" placeholder="Enter your email">
+              </label>
+              <label class="field">
+                <span>Class</span>
+                <input id="student-class" type="text" placeholder="Example: 10A1">
+              </label>
+              <label class="field">
+                <span>Level</span>
+                <input id="student-level" type="text" placeholder="A2 or B1">
+              </label>
+            </form>
+
+            <div class="button-row">
+              <button class="primary-button" type="button">Save</button>
+              <button class="ghost-button" type="button">Edit Entry</button>
+            </div>
+          </section>
+
+          <aside class="card teacher-observe-card">
+            <div class="card-header align-start">
+              <div>
+                <p class="section-kicker">Teacher observation</p>
+                <h2>Student monitor</h2>
+              </div>
+              <span class="pill">Teacher view</span>
+            </div>
+            <div class="teacher-profile">
+              <strong id="teacher-student-name">Student name</strong>
+              <span id="teacher-student-email">student@email.com</span>
+              <span id="teacher-student-meta">Class - Level</span>
+            </div>
+            <div class="observe-stats">
+              <article class="observe-item">
+                <span>Latest status</span>
+                <strong>Weekly log ready</strong>
+              </article>
+              <article class="observe-item">
+                <span>Teacher action</span>
+                <strong>Review and reply</strong>
+              </article>
+              <article class="observe-item">
+                <span>Current streak</span>
+                <strong>5 weeks</strong>
+              </article>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section-block" aria-labelledby="benefits-title">
+        <div class="section-heading">
+          <p class="section-kicker">Why DigiLog helps</p>
+          <h2 id="benefits-title">Friendly tools for steady learning</h2>
+        </div>
+        <div class="benefits-grid benefits-six">
+          <article class="info-card">
+            <div class="card-icon">01</div>
+            <h3>Set weekly goals</h3>
+            <p>Students choose a clear goal for the week in simple English.</p>
+          </article>
+          <article class="info-card">
+            <div class="card-icon">02</div>
+            <h3>Record what you learned</h3>
+            <p>Vocabulary, grammar, and practice tasks are easy to log.</p>
+          </article>
+          <article class="info-card">
+            <div class="card-icon">03</div>
+            <h3>Reflect on difficulties</h3>
+            <p>Learners can notice mistakes and ask for help without stress.</p>
+          </article>
+          <article class="info-card">
+            <div class="card-icon">04</div>
+            <h3>Get teacher feedback</h3>
+            <p>Teachers can leave kind notes, next steps, and encouragement.</p>
+          </article>
+          <article class="info-card">
+            <div class="card-icon">05</div>
+            <h3>Track progress visually</h3>
+            <p>Simple charts and stat cards show progress week by week.</p>
+          </article>
+          <article class="info-card">
+            <div class="card-icon">06</div>
+            <h3>Stay motivated</h3>
+            <p>Badges, reminders, and supportive messages help students continue.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="dashboard-grid section-block">
+        <section class="card large-card" id="logbook-form" aria-labelledby="logbook-title">
+          <div class="card-header align-start">
+            <div>
+              <p class="section-kicker">Main logbook</p>
+              <h2 id="logbook-title">Weekly Learning Log</h2>
+              <p class="support-copy">Short questions, clear labels, and simple English help students finish each log with confidence.</p>
+            </div>
+            <span class="pill">Easy English mode</span>
+          </div>
+
+          <form class="logbook-form">
+            <section class="section-panel">
+              <div class="panel-title-row">
+                <h3>Student Profile</h3>
+                <span class="tiny-note">Basic learning information</span>
+              </div>
+              <div class="form-grid profile-grid">
+                <label class="field">
+                  <span>Name</span>
+                  <input type="text" placeholder="Your full name">
+                </label>
+                <label class="field">
+                  <span>Class</span>
+                  <input type="text" placeholder="Your class">
+                </label>
+                <label class="field">
+                  <span>Level</span>
+                  <input type="text" placeholder="A2 or B1">
+                </label>
+                <label class="field">
+                  <span>Personal learning goal</span>
+                  <input type="text" placeholder="Example: speak more clearly">
+                </label>
+              </div>
+            </section>
+
+            <section class="section-panel">
+              <div class="panel-title-row">
+                <h3>Weekly Learning Goal</h3>
+                <span class="tiny-note">Plan your week</span>
+              </div>
+              <div class="form-grid profile-grid">
+                <label class="field">
+                  <span>This week's goal</span>
+                  <input type="text" placeholder="What do you want to improve?">
+                </label>
+                <label class="field">
+                  <span>Skills to improve</span>
+                  <input type="text" placeholder="Speaking, listening, reading, writing">
+                </label>
+                <label class="field field-wide">
+                  <span>Study time plan</span>
+                  <input type="text" placeholder="Example: 20 minutes every evening">
+                </label>
+              </div>
+            </section>
+
+            <section class="section-panel">
+              <div class="panel-title-row">
+                <h3>What I Learned</h3>
+                <span class="tiny-note">Record your learning</span>
+              </div>
+              <div class="form-grid">
+                <label class="field">
+                  <span>New vocabulary</span>
+                  <textarea rows="4" placeholder="Write new words you learned."></textarea>
+                </label>
+                <label class="field">
+                  <span>New grammar / sentence patterns</span>
+                  <textarea rows="4" placeholder="Write grammar points or useful sentences."></textarea>
+                </label>
+                <label class="field field-wide">
+                  <span>Practice completed</span>
+                  <textarea rows="4" placeholder="Speaking, listening, reading, or writing tasks you finished."></textarea>
+                </label>
+              </div>
+            </section>
+
+            <section class="section-panel">
+              <div class="panel-title-row">
+                <h3>My Difficulties</h3>
+                <span class="tiny-note">It is okay to ask for help</span>
+              </div>
+              <div class="form-grid">
+                <label class="field">
+                  <span>Things I found difficult</span>
+                  <textarea rows="4" placeholder="What was difficult this week?"></textarea>
+                </label>
+                <label class="field">
+                  <span>Common mistakes</span>
+                  <textarea rows="4" placeholder="What mistakes did you often make?"></textarea>
+                </label>
+                <label class="field field-wide">
+                  <span>What I need help with</span>
+                  <textarea rows="4" placeholder="What support do you need from your teacher?"></textarea>
+                </label>
+              </div>
+            </section>
+
+            <section class="section-panel">
+              <div class="panel-title-row">
+                <h3>Teacher Feedback</h3>
+                <span class="tiny-note">Teacher response area</span>
+              </div>
+              <div class="form-grid">
+                <label class="field">
+                  <span>Comment box</span>
+                  <textarea rows="4" placeholder="Teacher comments"></textarea>
+                </label>
+                <label class="field">
+                  <span>Suggestion for next week</span>
+                  <textarea rows="4" placeholder="Teacher suggestion for the next step"></textarea>
+                </label>
+                <label class="field field-wide">
+                  <span>Encouragement note</span>
+                  <textarea rows="3" placeholder="A short positive message from the teacher"></textarea>
+                </label>
+              </div>
+            </section>
+
+            <section class="section-panel">
+              <div class="panel-title-row">
+                <h3>Progress Summary</h3>
+                <span class="tiny-note">Finish with one short reflection</span>
+              </div>
+              <label class="field">
+                <span>My progress summary</span>
+                <textarea rows="4" placeholder="I improved in..., Next week I will..."></textarea>
+              </label>
+            </section>
+
+            <div class="button-row">
+              <button class="primary-button" type="button">Save</button>
+              <button class="secondary-button" type="button">Submit Weekly Log</button>
+              <button class="ghost-button" type="button">Edit Entry</button>
+            </div>
+          </form>
+        </section>
+
+        <aside class="side-column">
+          <section class="card" aria-labelledby="self-assessment-title">
+            <div class="card-header align-start">
+              <div>
+                <p class="section-kicker">Self-assessment</p>
+                <h2 id="self-assessment-title">How am I doing?</h2>
+              </div>
+              <span class="pill warm-pill">1 to 5 scale</span>
+            </div>
+
+            <div class="assessment-list">
+              <label class="range-widget">
+                <span>Confidence</span>
+                <input class="score-range" type="range" min="1" max="5" value="3">
+                <strong class="score-label">3 / 5</strong>
+              </label>
+              <label class="range-widget">
+                <span>Participation</span>
+                <input class="score-range" type="range" min="1" max="5" value="4">
+                <strong class="score-label">4 / 5</strong>
+              </label>
+              <label class="range-widget">
+                <span>Homework completion</span>
+                <input class="score-range" type="range" min="1" max="5" value="4">
+                <strong class="score-label">4 / 5</strong>
+              </label>
+              <label class="range-widget">
+                <span>Vocabulary retention</span>
+                <input class="score-range" type="range" min="1" max="5" value="3">
+                <strong class="score-label">3 / 5</strong>
+              </label>
+              <label class="range-widget">
+                <span>Speaking improvement</span>
+                <input class="score-range" type="range" min="1" max="5" value="3">
+                <strong class="score-label">3 / 5</strong>
+              </label>
+            </div>
+
+            <div class="emoji-row" aria-label="Feeling scale">
+              <button class="emoji-chip" type="button">Need help</button>
+              <button class="emoji-chip active" type="button">Doing okay</button>
+              <button class="emoji-chip" type="button">Feeling strong</button>
+            </div>
+
+            <div class="motivation-box" id="motivation-box">
+              You are making progress. Keep going.
+            </div>
+          </section>
+
+          <section class="card" aria-labelledby="feedback-title">
+            <div class="card-header align-start">
+              <div>
+                <p class="section-kicker">Teacher support</p>
+                <h2 id="feedback-title">Feedback cards</h2>
+              </div>
+            </div>
+
+            <article class="feedback-card accent-blue">
+              <span class="feedback-label">Teacher comment preview</span>
+              <h3>Good effort this week</h3>
+              <p>You used more complete sentences and stronger vocabulary in your writing.</p>
+            </article>
+            <article class="feedback-card accent-teal">
+              <span class="feedback-label">Next step</span>
+              <h3>Practice speaking every day</h3>
+              <p>Speak for two minutes about your day and try to use three new words.</p>
+            </article>
+            <article class="feedback-card accent-warm">
+              <span class="feedback-label">Encouragement note</span>
+              <h3>You are improving week by week</h3>
+              <p>Your effort matters. Small practice every day will help you speak more naturally.</p>
+            </article>
+          </section>
+
+          <section class="card" aria-labelledby="support-title">
+            <div class="card-header align-start">
+              <div>
+                <p class="section-kicker">Reminder</p>
+                <h2 id="support-title">Stay on track</h2>
+              </div>
+              <span class="achievement-badge">5 Week Streak</span>
+            </div>
+            <div class="support-stack">
+              <div class="reminder-card">
+                <strong>Next check-in</strong>
+                <p>Submit your weekly log before Friday 6:00 PM.</p>
+              </div>
+              <div class="reminder-card soft-green">
+                <strong>Best skill now</strong>
+                <p>Speaking improvement is your strongest growing area.</p>
+              </div>
+            </div>
+          </section>
+        </aside>
+      </section>
+
+      <section class="section-block" id="pronunciation" aria-labelledby="pronunciation-title">
+        <div class="card pronunciation-card">
+          <div class="card-header align-start">
+            <div>
+              <p class="section-kicker">Pronunciation practice</p>
+              <h2 id="pronunciation-title">Check your reading out loud</h2>
+              <p class="support-copy">Read the sentence aloud, or type what the speech tool heard. Green letters look correct. Red letters need more practice.</p>
+            </div>
+            <span class="pill">Friendly speaking check</span>
+          </div>
+
+          <div class="pronunciation-grid">
+            <section class="section-panel">
+              <label class="field">
+                <span>Practice sentence</span>
+                <select id="sentence-select" class="clean-select">
+                  <option value="I study English every day after school.">I study English every day after school.</option>
+                  <option value="My teacher helps me speak with confidence.">My teacher helps me speak with confidence.</option>
+                  <option value="This week I learned new words and useful grammar.">This week I learned new words and useful grammar.</option>
+                  <option value="__custom__">Use my own text</option>
+                </select>
+              </label>
+              <label class="field" id="custom-text-field" hidden>
+                <span>My own text</span>
+                <textarea id="custom-sentence" rows="5" placeholder="Type or paste your own text here. Maximum 500 words."></textarea>
+                <small class="tiny-help" id="custom-text-help">0 / 500 words</small>
+              </label>
+              <div class="sentence-preview">
+                <span class="mini-title">Target sentence</span>
+                <p id="target-sentence">I study English every day after school.</p>
+              </div>
+              <div class="button-row">
+                <button class="primary-button" type="button" id="start-pronunciation">Start Reading</button>
+                <button class="ghost-button" type="button" id="stop-pronunciation">Stop Reading</button>
+                <button class="secondary-button" type="button" id="check-pronunciation">Check Pronunciation</button>
+              </div>
+              <p class="tiny-help" id="speech-status">Your browser can use speech input if supported.</p>
+            </section>
+
+            <section class="section-panel">
+              <label class="field">
+                <span>Speech result</span>
+                <textarea id="spoken-text" rows="4" placeholder="Your spoken words will appear here, or you can type them."></textarea>
+              </label>
+              <div class="pronunciation-score-card">
+                <span class="mini-title">Pronunciation summary</span>
+                <strong id="pronunciation-score">0%</strong>
+                <p id="pronunciation-message">Try reading the sentence slowly and clearly.</p>
+              </div>
+            </section>
+          </div>
+
+          <section class="section-panel pronunciation-result-panel">
+            <div class="panel-title-row">
+              <h3>Word feedback</h3>
+              <span class="tiny-note">IPA guide above each word. Green = correct, Red = needs practice, Gray = not checked yet</span>
+            </div>
+            <div id="pronunciation-feedback" class="pronunciation-feedback" aria-live="polite"></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="section-block" id="writing-task" aria-labelledby="writing-task-title">
+        <div class="card writing-card">
+          <div class="card-header align-start">
+            <div>
+              <p class="section-kicker">Writing practice</p>
+              <h2 id="writing-task-title">Submit your writing task</h2>
+              <p class="support-copy">Write your paragraph in simple English. DigiLog will check the word level and highlight A1, A2, and higher-level words.</p>
+            </div>
+            <span class="pill warm-pill">Supportive writing check</span>
+          </div>
+
+          <div class="writing-grid">
+            <section class="section-panel">
+              <label class="field">
+                <span>Writing topic</span>
+                <input id="writing-topic" type="text" placeholder="Example: My best weekend memory">
+              </label>
+              <label class="field">
+                <span>My writing task</span>
+                <textarea id="writing-text" rows="10" placeholder="Write your paragraph here. Try to use full sentences and clear ideas."></textarea>
+              </label>
+              <div class="button-row">
+                <button class="ghost-button" type="button" id="save-writing-button">Save Draft</button>
+                <button class="primary-button" type="button" id="submit-writing-button">Submit Writing Task</button>
+              </div>
+              <p class="tiny-help" id="writing-status">Write your task, then click Submit Writing Task to check word levels.</p>
+            </section>
+
+            <section class="section-panel">
+              <div class="panel-title-row">
+                <h3>Word level guide</h3>
+                <span class="tiny-note">Colors help learners understand vocabulary level</span>
+              </div>
+              <div class="writing-legend" aria-label="Writing color legend">
+                <span class="writing-legend-item legend-a1">A1 words</span>
+                <span class="writing-legend-item legend-a2">A2 words</span>
+                <span class="writing-legend-item legend-higher">Higher-level words</span>
+              </div>
+              <div class="writing-summary-card">
+                <span class="mini-title">Writing summary</span>
+                <strong id="writing-summary-score">0 words checked</strong>
+                <p id="writing-summary-message">Your highlighted writing will appear here after you submit.</p>
+              </div>
+              <div class="writing-stats" id="writing-stats" aria-live="polite"></div>
+            </section>
+          </div>
+
+          <section class="section-panel writing-result-panel">
+            <div class="panel-title-row">
+              <h3>Highlighted writing</h3>
+              <span class="tiny-note">A1 = green, A2 = blue, Higher = orange</span>
+            </div>
+            <div id="writing-highlighted-text" class="writing-highlighted-text" aria-live="polite"></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="section-block" id="vocabulary-tracker" aria-labelledby="vocabulary-title">
+        <div class="card vocabulary-card">
+          <div class="card-header align-start vocabulary-header">
+            <div>
+              <p class="section-kicker">Vocabulary learning</p>
+              <h2 id="vocabulary-title">Vocabulary Tracker</h2>
+              <p class="support-copy">Track words by level, category, and learning progress.</p>
+            </div>
+            <div class="vocabulary-actions">
+              <button class="ghost-button" type="button" id="add-word-button">Add New Word</button>
+              <button class="secondary-button" type="button" id="export-list-button">Export List</button>
+              <button class="primary-button" type="button" id="review-today-button">Review Today</button>
+            </div>
+          </div>
+
+          <div class="tracker-tabs" role="tablist" aria-label="Vocabulary views">
+            <button class="tracker-tab active" type="button" data-tab="vocabulary" role="tab" aria-selected="true">
+              <span class="tab-icon">V</span>
+              <span>Vocabulary</span>
+            </button>
+            <button class="tracker-tab" type="button" data-tab="category" role="tab" aria-selected="false">
+              <span class="tab-icon">C</span>
+              <span>By Category</span>
+            </button>
+            <button class="tracker-tab" type="button" data-tab="level" role="tab" aria-selected="false">
+              <span class="tab-icon">L</span>
+              <span>By Level</span>
+            </button>
+            <button class="tracker-tab" type="button" data-tab="progress" role="tab" aria-selected="false">
+              <span class="tab-icon">P</span>
+              <span>By Progress</span>
+            </button>
+          </div>
+          <section class="word-lookup-panel" aria-labelledby="lookup-title">
+            <div class="panel-title-row">
+              <div>
+                <h3 id="lookup-title">Add a word from the learner list</h3>
+                <p class="support-copy">Type one English word. DigiLog will check an online dictionary, then suggest meaning, category, and level.</p>
+              </div>
+              <span class="pill warm-pill">Online check</span>
+            </div>
+            <div class="word-lookup-grid">
+              <label class="field lookup-field">
+                <span>New vocabulary</span>
+                <input id="new-word-input" type="text" placeholder="Example: biodiversity">
+              </label>
+              <div class="lookup-actions">
+                <button class="primary-button" type="button" id="lookup-word-button">Check Online Dictionary</button>
+                <button class="ghost-button" type="button" id="clear-lookup-button">Clear</button>
+              </div>
+            </div>
+            <p class="tiny-help" id="lookup-status">Add a word to check meaning and save it into the tracker.</p>
+            <div class="lookup-preview" id="lookup-preview"></div>
+          </section>
+
+          <div class="tracker-stats" id="tracker-stats"></div>
+
+          <div class="tracker-toolbar">
+            <label class="search-field">
+              <span class="sr-only">Search vocabulary</span>
+              <input id="vocabulary-search" type="search" placeholder="Search vocabulary...">
+            </label>
+            <div class="tracker-filters">
+              <label class="field compact-field">
+                <span>Level</span>
+                <select id="level-filter" class="clean-select">
+                  <option value="all">All levels</option>
+                  <option value="A2">A2</option>
+                  <option value="B1">B1</option>
+                  <option value="B2">B2</option>
+                  <option value="C1">C1</option>
+                </select>
+              </label>
+              <label class="field compact-field">
+                <span>Category</span>
+                <select id="category-filter" class="clean-select">
+                  <option value="all">All categories</option>
+                  <option value="Nature & Environment">Nature & Environment</option>
+                  <option value="Medical & Health">Medical & Health</option>
+                  <option value="Travel & Tourism">Travel & Tourism</option>
+                  <option value="Legal & Law">Legal & Law</option>
+                  <option value="Business & Finance">Business & Finance</option>
+                  <option value="Art, Literature & Music">Art, Literature & Music</option>
+                </select>
+              </label>
+              <label class="field compact-field">
+                <span>Sort</span>
+                <select id="progress-sort" class="clean-select">
+                  <option value="default">Sort by progress</option>
+                  <option value="progress">Progress</option>
+                  <option value="level">Level</option>
+                  <option value="category">Category</option>
+                  <option value="word">Word</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="vocabulary-table-card">
+            <div class="table-meta">
+              <p id="vocabulary-count">0 words</p>
+              <p id="vocabulary-view-label">Showing all vocabulary items.</p>
+            </div>
+            <div class="table-scroll">
+              <table class="vocabulary-table">
+                <thead>
+                  <tr>
+                    <th>Word</th>
+                    <th>Meaning</th>
+                    <th>Example Sentence</th>
+                    <th>Level</th>
+                    <th>Category</th>
+                    <th>Learning Progress</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="vocabulary-table-body"></tbody>
+              </table>
+            </div>
+            <div class="vocabulary-mobile-list" id="vocabulary-mobile-list"></div>
+            <div class="tracker-pagination">
+              <span id="pagination-text">Page 1 of 1</span>
+              <div class="pagination-actions">
+                <button class="ghost-button small-button" type="button">Previous</button>
+                <button class="ghost-button small-button" type="button">Next</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-block" id="progress" aria-labelledby="progress-title">
+        <div class="card progress-dashboard">
+          <div class="card-header align-start">
+            <div>
+              <p class="section-kicker">Progress tracking</p>
+              <h2 id="progress-title">My Progress Dashboard</h2>
+              <p class="support-copy">Clear progress cards help students stay motivated and help teachers review growth quickly.</p>
+            </div>
+            <button class="primary-button" type="button">View Progress</button>
+          </div>
+
+          <div class="progress-grid progress-five">
+            <div class="metric-card">
+              <span class="metric-label">Weeks completed</span>
+              <strong>12</strong>
+              <p>Great consistency this term.</p>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Logbook streak</span>
+              <strong>5</strong>
+              <p>Five weeks in a row.</p>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Best skill</span>
+              <strong>Speaking</strong>
+              <p>Your confidence is growing.</p>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Current goal</span>
+              <strong>Use longer answers</strong>
+              <p>Focus for this week.</p>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Completion rate</span>
+              <strong id="confidence-score">68%</strong>
+              <p>Based on your self-check.</p>
+            </div>
+          </div>
+
+          <div class="progress-summary enhanced-summary">
+            <div class="summary-copy">
+              <h3>Progress Summary</h3>
+              <p>
+                You are improving in vocabulary and speaking practice. Next, focus on listening speed and using longer answers during class discussion.
+              </p>
+              <div class="milestone-row">
+                <span class="milestone-chip">Achievement badge unlocked</span>
+                <span class="milestone-chip">Teacher review ready</span>
+              </div>
+            </div>
+            <div class="chart-card">
+              <div class="chart-bars" aria-label="Simple weekly progress chart">
+                <span style="height: 45%"></span>
+                <span style="height: 54%"></span>
+                <span style="height: 64%"></span>
+                <span style="height: 76%"></span>
+                <span style="height: 86%"></span>
+              </div>
+              <div class="chart-labels">
+                <span>W1</span>
+                <span>W2</span>
+                <span>W3</span>
+                <span>W4</span>
+                <span>W5</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block" aria-labelledby="motivation-title">
+        <div class="motivation-strip">
+          <div>
+            <p class="section-kicker">Reflection and motivation</p>
+            <h2 id="motivation-title">Every small step matters</h2>
+          </div>
+          <p>
+            You are improving week by week. Keep writing, keep practicing, and keep believing in your progress.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <h3>DigiLog</h3>
+        <p>Digital support for English learners and teachers.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#register">Support learners</a>
+        <a href="#feedback-title">Contact teacher</a>
+        <span>Copyright 2026 DigiLog</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
